@@ -24,7 +24,7 @@ const SectionReveal = ({ children }) => {
 
 /* Spacer between sections with a subtle divider line */
 const SectionDivider = () => (
-  <div style={{ padding: "0.5rem 0" }}>
+  <div style={{ padding: "1.5rem 0" }}>
     <div className="section-divider" />
   </div>
 );

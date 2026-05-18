@@ -48,6 +48,11 @@ section[id] {
     flex-shrink: 1 !important;
     white-space: nowrap;
   }
+
+  /* Section divider — proportionally smaller on mobile */
+  .section-divider {
+    margin: 0 1rem;
+  }
 }
 
 
@@ -56,7 +61,7 @@ section[id] {
 ================================================================ */
 @media (max-width: 767px) {
   #about {
-    padding: 3.5rem 1rem 4rem !important;
+    padding: 3rem 1rem !important;
   }
 
   /* Stack the two-column heading/bio grid to single column */
@@ -90,8 +95,8 @@ section[id] {
 ================================================================ */
 @media (max-width: 767px) {
   #skills {
-    padding-top: 3.5rem !important;
-    padding-bottom: 4rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 }
 
@@ -101,8 +106,7 @@ section[id] {
 ================================================================ */
 @media (max-width: 767px) {
   #work {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding: 3rem 1rem !important;
   }
 
   /* The outermost timeline item row (dot col + card col) must NOT wrap */
@@ -124,8 +128,7 @@ section[id] {
 ================================================================ */
 @media (max-width: 767px) {
   #education {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding: 3rem 1rem !important;
   }
 
   .edu-card-row {
@@ -161,8 +164,7 @@ section[id] {
 ================================================================ */
 @media (max-width: 767px) {
   #projects {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding: 3rem 1rem !important;
   }
 
   .projects-grid {

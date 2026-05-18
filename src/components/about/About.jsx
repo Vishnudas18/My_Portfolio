@@ -51,7 +51,7 @@ const About = () => (
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "5rem 1.5rem 6rem",
+      padding: "5rem 1.5rem 4rem",
       position: "relative",
       overflow: "hidden",
       width: "100%",
