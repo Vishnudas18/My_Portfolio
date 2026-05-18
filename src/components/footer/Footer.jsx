@@ -115,7 +115,7 @@ const Footer = () => {
                 <div style={{ padding: "0.375rem", borderRadius: "0.5rem", background: "rgba(167,139,250,0.1)", color: "#a78bfa", flexShrink: 0 }}>
                   <Mail size={13} />
                 </div>
-                <span className="text-muted font-light" style={{ fontSize: "0.875rem" }}>vishnudasp1800@gmail.com</span>
+                <span className="text-muted font-light" style={{ fontSize: "0.875rem" }}>dvishnu640@gmail.com</span>
               </a>
 
               <a
