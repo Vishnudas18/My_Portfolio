@@ -12,9 +12,9 @@ import Footer from "./components/footer/Footer";
 const SectionReveal = ({ children }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.08 }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}

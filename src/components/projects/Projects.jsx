@@ -64,7 +64,7 @@ const Projects = () => {
 
         {/* Section Label */}
         <motion.div
-          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, margin: "-80px" }}
+          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1rem", marginBottom: "2rem" }}
         >
           <span className="text-primary font-display font-semibold text-sm tracking-widest uppercase">05</span>
@@ -74,7 +74,7 @@ const Projects = () => {
 
         {/* Title */}
         <motion.h2
-          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, margin: "-80px" }}
+          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           className="font-display font-bold text-white tracking-tight"
           style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "1rem", textAlign: "center" }}
         >
@@ -82,7 +82,7 @@ const Projects = () => {
         </motion.h2>
 
         <motion.p
-          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: false, margin: "-80px" }}
+          variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
           className="text-muted"
           style={{ textAlign: "center", marginBottom: "4rem", maxWidth: "30rem", marginLeft: "auto", marginRight: "auto", lineHeight: 1.7 }}
         >
@@ -103,7 +103,8 @@ const Projects = () => {
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-60px" }}
+              whileHover={{ y: -6 }}
+              viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               style={{
                 borderRadius: "1.25rem",
@@ -112,17 +113,15 @@ const Projects = () => {
                 overflow: "hidden",
                 display: "flex",
                 flexDirection: "column",
-                transition: "all 0.4s ease",
+                transition: "border-color 0.4s ease, box-shadow 0.4s ease",
                 cursor: "pointer",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgba(167,139,250,0.2)";
-                e.currentTarget.style.transform = "translateY(-6px)";
                 e.currentTarget.style.boxShadow = "0 20px 50px rgba(0,0,0,0.4)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)";
-                e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "none";
               }}
             >
