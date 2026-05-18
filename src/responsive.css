@@ -1,0 +1,212 @@
+/* ============================================================
+   RESPONSIVE OVERRIDES  — src/responsive.css
+   Applied after index.css.
+   Desktop (≥768px) left completely untouched.
+   ============================================================ */
+
+/* ── Hard overflow guard ── */
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.orb {
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+
+/* ================================================================
+   PILL / TAG OVERFLOW FIX (all sections)
+   Target only containers that hold pills/badges — NOT the
+   top-level layout flex rows (e.g. timeline dot+card row).
+   We use the shared rounded-full pill pattern as the hook.
+================================================================ */
+@media (max-width: 767px) {
+
+  /* Any flex row whose DIRECT children contain rounded-full elements must wrap.
+     We target these by adding a shared CSS class 'pill-row' in the JSX below,
+     OR we rely on Tailwind's flex-wrap class being present. */
+
+  /* Tailwind flex-wrap: the class generates "flex-wrap: wrap" but Tailwind
+     may have lower specificity than some inherited rules. Boost it here. */
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  /* Ensure pill spans can shrink */
+  .rounded-full {
+    flex-shrink: 1 !important;
+    white-space: nowrap;
+  }
+}
+
+
+/* ================================================================
+   ABOUT SECTION — mobile responsive
+================================================================ */
+@media (max-width: 767px) {
+  #about {
+    padding: 3.5rem 1rem 4rem !important;
+  }
+
+  /* Stack the two-column heading/bio grid to single column */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Stats: 2 columns on mobile (2x2 grid) */
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Specialty cards: single column on mobile */
+  .specialty-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.875rem !important;
+  }
+}
+
+/* At 480–767px: specialty cards go 2 columns */
+@media (min-width: 480px) and (max-width: 767px) {
+  .specialty-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ================================================================
+   SKILLS — handled by skills.css (marquee cards resize at 767px)
+================================================================ */
+@media (max-width: 767px) {
+  #skills {
+    padding-top: 3.5rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+
+/* ================================================================
+   EXPERIENCE — protect timeline flex-row from wrapping
+================================================================ */
+@media (max-width: 767px) {
+  #work {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* The outermost timeline item row (dot col + card col) must NOT wrap */
+  #work .flex.gap-4,
+  #work .flex.gap-6 {
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+  }
+
+  /* The dot column must never shrink */
+  #work .flex-shrink-0 {
+    flex-shrink: 0 !important;
+  }
+}
+
+
+/* ================================================================
+   EDUCATION
+================================================================ */
+@media (max-width: 767px) {
+  #education {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .edu-card-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .edu-grad-icon {
+    display: none !important;
+  }
+
+  .edu-cert-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .edu-card-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    padding: 1.25rem !important;
+  }
+  .edu-grad-icon {
+    display: block !important;
+  }
+}
+
+
+/* ================================================================
+   PROJECTS
+================================================================ */
+@media (max-width: 767px) {
+  #projects {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
+
+
+/* ================================================================
+   FOOTER
+================================================================ */
+@media (max-width: 767px) {
+  #contact {
+    padding-top: 3rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .footer-cta {
+    margin-bottom: 2.5rem !important;
+  }
+
+  #contact h2 {
+    font-size: clamp(1.625rem, 7vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+    padding-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+
+/* ================================================================
+   GLOBAL TEXT
+================================================================ */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+p, li, span, a {
+  overflow-wrap: break-word;
+}
