@@ -5,6 +5,7 @@ import { GithubIcon } from "@/components/ui/SocialIcons";
 import screenshot1 from "@/assets/Screenshot 2026-05-18 124311.png";
 import screenshot2 from "@/assets/Screenshot 2026-05-18 124418.png";
 import eplantImg from "@/assets/eplant.png";
+import cartilloteImg from "@/assets/cartillote.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -33,14 +34,14 @@ const projects = [
     accent: "rgba(129,140,248,0.15)",
   },
   {
-    title: "E-Plant",
+    title: "Cartilotte E-Commerce",
     description:
-      "Plant-based commercial web application for buying and selling plants and eco-friendly products. Provides an Amazon/Flipkart-inspired e-commerce experience with organized product listings and essential shopping features.",
-    tags: ["React", "Node.js", "Express", "MongoDB Atlas", "JWT", "Bootstrap"],
-    link: "#",
+      "A modern, premium multi-vendor e-commerce web application featuring dynamic category-based routing, interactive product galleries, and a sleek user-friendly interface.",
+    tags: ["React", "Vite", "Tailwind CSS", "Responsive UI"],
+    link: "https://user-ecommerce.netlify.app/",
     github: "#",
-    image: eplantImg,
-    accent: "rgba(240,171,252,0.12)",
+    image: cartilloteImg,
+    accent: "rgba(59,130,246,0.15)",
   },
 ];
 
