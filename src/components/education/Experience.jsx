@@ -5,12 +5,26 @@ import "./experience.css";
 
 const experience = [
   {
+    title: "Web Developer",
+    org: "ESAB India Pvt Ltd",
+    period: "June 2026 — Present",
+    location: "Chennai, India",
+    type: "Full-time",
+    current: true,
+    tags: ["React", "Node.js", "Express.js", "PostgreSQL", "TypeScript", "Vue.js", "Docker", "Git"],
+    points: [
+      "Developing and maintaining full-stack web applications using modern frontend and backend technologies, with a focus on responsive interfaces and scalable application architecture.",
+      "Working on an Asset Management System to manage assets, categories, users, permissions, attachments, calibration, financial information, and asset lifecycle operations.",
+      "Building REST APIs with Node.js and Express.js, integrating PostgreSQL databases, implementing authentication and role-based access control, and using Docker for development and deployment workflows.",
+    ],
+  },
+  {
     title: "MERN Stack Developer Intern",
     org: "Codeedex Technologies",
-    period: "2024 — Present",
-    location: "Remote",
+    period: "Jan 2026 — May 2026",
+    location: "Perinthalmanna,Malappuram",
     type: "Internship",
-    current: true,
+    current: false,
     tags: ["React", "Node.js", "MongoDB", "Express", "Angular", "Next.js", "TypeScript", "Tailwind CSS"],
     points: [
       "Developed full-stack web applications using the MERN stack, building responsive and dynamic user interfaces with HTML, CSS, and JavaScript.",
